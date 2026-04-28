@@ -3,6 +3,10 @@
 [![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)](https://www.trae.ai/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
+[English](./README.md) | [中文](./README_zh.md)
+
+---
+
 ## About This Project
 
 **Trae Skills** is a curated collection of custom skills designed specifically for [Trae IDE](https://www.trae.ai/) on Windows. These skills help developers automate repetitive tasks, establish development rules, and optimize coding workflows with a focus on Windows environment compatibility.
@@ -64,6 +68,8 @@ All skills follow these principles:
 ## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+For Chinese version, see [CONTRIBUTING_zh.md](CONTRIBUTING_zh.md).
 
 ## License
 

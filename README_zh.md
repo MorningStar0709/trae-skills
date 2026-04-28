@@ -3,6 +3,10 @@
 [![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)](https://www.trae.ai/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
+[English](./README.md) | [中文](./README_zh.md)
+
+---
+
 ## 关于本项目
 
 **Trae Skills** 是一套专为 Windows 平台 [Trae IDE](https://www.trae.ai/) 设计的 Skills 工具集，帮助开发者自动化重复性任务、规范开发流程，并确保在 Windows 环境下的稳定运行。
@@ -63,7 +67,9 @@ python skills/skill-stability-review/scripts/review_skills.py --skill skills/<sk
 
 ## 贡献指南
 
-欢迎贡献代码！请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 了解贡献指南。
+欢迎贡献代码！请阅读 [CONTRIBUTING_zh.md](CONTRIBUTING_zh.md) 了解贡献指南。
+
+英文版本请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 开源协议
 
