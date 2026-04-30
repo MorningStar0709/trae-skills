@@ -21,7 +21,7 @@
 2. 克隆你的 Fork 到本地
    ```powershell
    git clone https://github.com/MorningStar0709/trae-agent-system.git
-cd trae-agent-os
+cd trae-agent-system
    ```
 
 3. 创建特性分支

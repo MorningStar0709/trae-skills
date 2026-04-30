@@ -21,7 +21,7 @@ If you find a bug or have a feature suggestion, please report it through GitHub 
 2. Clone your Fork locally
    ```powershell
    git clone https://github.com/MorningStar0709/trae-agent-system.git
-cd trae-agent-os
+cd trae-agent-system
    ```
 
 3. Create a feature branch
