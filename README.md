@@ -1,4 +1,4 @@
-# Trae AI Agent OS
+# Trae AI Agent System
 
 [![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)](https://www.trae.ai/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
