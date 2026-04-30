@@ -56,6 +56,17 @@ npx trae-agent-system --edition intl     # 国际版
 npx trae-agent-system --help             # 查看帮助
 ```
 
+### 前置依赖（MCP）
+
+部分技能需要以下 MCP Server 才能完整体验：
+
+| MCP Server | 用途 | 安装方式 |
+|:-----------|:-----|:---------|
+| **Everything Search** | Windows 本地文件快速搜索 | 在 Trae 设置 → MCP 中添加，配置参考 everything-search skill |
+| **Chrome DevTools MCP** | 浏览器自动化、Console/Network/DOM 调试、性能分析 | 在 Trae 设置 → MCP 中添加 `npx chrome-devtools-mcp` |
+
+> 这两个 MCP 使能 `everything-search` 和 `chrome-devtools` 等技能的核心功能。如不安装，相关技能将无法使用。
+
 ### 方式二：手动安装
 
 ```

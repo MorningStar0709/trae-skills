@@ -56,6 +56,17 @@ npx trae-agent-system --edition intl     # International edition
 npx trae-agent-system --help             # View help
 ```
 
+### Prerequisites (MCP)
+
+Some skills require the following MCP Servers for full functionality:
+
+| MCP Server | Purpose | Installation |
+|:-----------|:--------|:-------------|
+| **Everything Search** | Windows local file search | Add in Trae Settings → MCP, see everything-search skill for config |
+| **Chrome DevTools MCP** | Browser automation, Console/Network/DOM debugging, performance analysis | Add `npx chrome-devtools-mcp` in Trae Settings → MCP |
+
+> These MCPs power the `everything-search` and `chrome-devtools` skills. Without them, related skills will not work.
+
 ### Method 2: Manual Install
 
 ```
