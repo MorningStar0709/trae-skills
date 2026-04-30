@@ -2,6 +2,7 @@
 
 [![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)](https://www.trae.ai/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![npm](https://img.shields.io/npm/v/trae-agent-system?style=flat-square)](https://www.npmjs.com/package/trae-agent-system)
 
 [English](./README.md) | [中文](./README_zh.md)
 
@@ -9,7 +10,7 @@
 
 ## About This Project
 
-**Trae AI Agent OS** is an AI Agent enhancement system for [Trae IDE](https://www.trae.ai/). It provides Rule-based routing, professional Skills, and persistent Memory capabilities — transforming your Agent from "can do anything but unstable" to "fast when simple, rigorous when complex, always learning".
+**Trae AI Agent System** is an AI Agent enhancement system for [Trae IDE](https://www.trae.ai/). It provides Rule-based routing, professional Skills, and persistent Memory capabilities — transforming your Agent from "can do anything but unstable" to "fast when simple, rigorous when complex, always learning".
 
 ## Architecture
 
@@ -33,9 +34,44 @@ User Input → Rules (Routing & Constraints) → Skills (Execution) → Memory (
 
 ## Quick Start
 
-### Installation
+### Method 1: npm install (Recommended)
 
-Copy the `.trae/` directory to your Trae project root. No plugins or scripts required.
+```
+cd /your/project
+npx trae-agent-system
+```
+
+Follow the interactive prompt to select your Trae edition:
+
+| Edition | Install Location | Description |
+|:--------|:-----------------|:------------|
+| China (trae.cn) | `~/.trae-cn/rules/` + `~/.trae-cn/skills/` | Global, applies to all projects |
+| International (trae.ai) | `~/.trae/rules/` + `~/.trae/skills/` | Global, applies to all projects |
+
+You can also specify the edition directly with `--edition`:
+
+```
+npx trae-agent-system --edition cn       # China edition
+npx trae-agent-system --edition intl     # International edition
+npx trae-agent-system --help             # View help
+```
+
+### Method 2: Manual Install
+
+```
+# Clone the repository
+git clone https://github.com/MorningStar0709/trae-agent-system.git
+
+# Choose your edition and copy to the corresponding directory
+
+# China edition (trae.cn)
+cp -r trae-agent-system/rules  ~/.trae-cn/rules
+cp -r trae-agent-system/skills ~/.trae-cn/skills
+
+# International edition (trae.ai)
+cp -r trae-agent-system/rules  ~/.trae/rules
+cp -r trae-agent-system/skills ~/.trae/skills
+```
 
 ### Try These Commands
 

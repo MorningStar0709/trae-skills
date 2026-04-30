@@ -1,0 +1,40 @@
+{
+  "name": "trae-agent-system",
+  "version": "1.0.0",
+  "description": "Trae AI Agent System — 为 Trae IDE 打造的 AI Agent 增强系统：35 个专业技能 + 8 条行为规则，让 AI Agent 更稳定、更专业",
+  "type": "module",
+  "bin": {
+    "trae-agent-system": "bin/trae-agent-system.js"
+  },
+  "files": [
+    "bin/",
+    "rules/",
+    "skills/",
+    "docs/",
+    "README.md",
+    "README_zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "trae",
+    "ai-agent",
+    "skills",
+    "rules",
+    "agent-system",
+    "trae-skills",
+    "agent",
+    "chinese",
+    "中文",
+    "windows"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MorningStar0709/trae-agent-system.git"
+  },
+  "homepage": "https://github.com/MorningStar0709/trae-agent-system",
+  "author": "MorningStar0709",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

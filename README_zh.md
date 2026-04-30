@@ -2,6 +2,7 @@
 
 [![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)](https://www.trae.ai/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+[![npm](https://img.shields.io/npm/v/trae-agent-system?style=flat-square)](https://www.npmjs.com/package/trae-agent-system)
 
 [English](./README.md) | [中文](./README_zh.md)
 
@@ -33,9 +34,44 @@
 
 ## 快速开始
 
-### 安装
+### 方式一：npm 安装（推荐）
 
-将 `.trae/` 目录复制到你的 Trae 项目根目录即可。无需插件，无需脚本。
+```
+cd /your/project
+npx trae-agent-system
+```
+
+根据提示选择你的 Trae 版本即可完成安装：
+
+| 版本 | 安装位置 | 说明 |
+|:-----|:---------|:-----|
+| 国内版（trae.cn） | `~/.trae-cn/rules/` + `~/.trae-cn/skills/` | 全局生效，所有项目可用 |
+| 国际版（trae.ai） | `~/.trae/rules/` + `~/.trae/skills/` | 全局生效，所有项目可用 |
+
+你也可以通过 `--edition` 参数直接指定版本：
+
+```
+npx trae-agent-system --edition cn       # 国内版
+npx trae-agent-system --edition intl     # 国际版
+npx trae-agent-system --help             # 查看帮助
+```
+
+### 方式二：手动安装
+
+```
+# 克隆仓库
+git clone https://github.com/MorningStar0709/trae-agent-system.git
+
+# 选择你的版本，复制到对应目录
+
+# 国内版（trae.cn）
+cp -r trae-agent-system/rules  ~/.trae-cn/rules
+cp -r trae-agent-system/skills ~/.trae-cn/skills
+
+# 国际版（trae.ai）
+cp -r trae-agent-system/rules  ~/.trae/rules
+cp -r trae-agent-system/skills ~/.trae/skills
+```
 
 ### 试试这些指令
 
