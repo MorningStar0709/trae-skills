@@ -20,8 +20,8 @@ If you find a bug or have a feature suggestion, please report it through GitHub 
 1. Fork this repository
 2. Clone your Fork locally
    ```powershell
-   git clone https://github.com/MorningStar0709/trae-skills.git
-   cd trae-skills
+   git clone https://github.com/MorningStar0709/trae-agent-os.git
+cd trae-agent-os
    ```
 
 3. Create a feature branch
@@ -157,7 +157,7 @@ A:
 
 ## Contact
 
-- **GitHub Issues**: [Submit issues](https://github.com/MorningStar0709/trae-skills/issues)
+- **GitHub Issues**: [Submit issues](https://github.com/MorningStar0709/trae-agent-os/issues)
 
 ## Code of Conduct
 

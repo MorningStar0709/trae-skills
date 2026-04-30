@@ -20,8 +20,8 @@
 1. Fork 本仓库
 2. 克隆你的 Fork 到本地
    ```powershell
-   git clone https://github.com/MorningStar0709/trae-skills.git
-   cd trae-skills
+   git clone https://github.com/MorningStar0709/trae-agent-os.git
+cd trae-agent-os
    ```
 
 3. 创建特性分支
@@ -157,7 +157,7 @@ A:
 
 ## 联系方式
 
-- **GitHub Issues**: [提交问题](https://github.com/MorningStar0709/trae-skills/issues)
+- **GitHub Issues**: [提交问题](https://github.com/MorningStar0709/trae-agent-os/issues)
 - **Email**: （可选）
 
 ## 行为准则
