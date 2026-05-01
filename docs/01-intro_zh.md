@@ -1,4 +1,4 @@
-# Trae AI Agent System
+# Trae AI Agent Enhancements
 
 本项目是一套为 Trae IDE 打造的 **AI Agent 规则与技能集**。通过 `npx trae-agent-enhancements` 一键安装到全局，Agent 立即获得规则约束、专业技能和持续记忆能力。
 
@@ -17,7 +17,7 @@
 ## 快速开始
 
 ```bash
-npx trae-agent-system
+npx trae-agent-enhancements
 ```
 
 根据提示选择你的 Trae 版本（国内版或国际版），即可全局生效，所有项目可用。

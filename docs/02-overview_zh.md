@@ -1,4 +1,4 @@
-# Trae AI Agent System：让你的 Agent 更聪明、更靠谱
+# Trae AI Agent Enhancements：让你的 Agent 更聪明、更靠谱
 
 > 一套为 Trae IDE 打造的 AI Agent 规则与技能集。
 >

@@ -1,4 +1,4 @@
-# Trae AI Agent System
+# Trae AI Agent Enhancements
 
 This project is a **Trae AI Agent rules and skills collection**. Run `npx trae-agent-enhancements` to install globally — your Agent immediately gains rule constraints, professional skills, and persistent memory capabilities.
 
@@ -17,7 +17,7 @@ This project is a **Trae AI Agent rules and skills collection**. Run `npx trae-a
 ## Quick Start
 
 ```bash
-npx trae-agent-system
+npx trae-agent-enhancements
 ```
 
 Follow the prompt to select your Trae edition (China or International). Installed globally for all projects.

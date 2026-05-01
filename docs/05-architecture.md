@@ -1,4 +1,4 @@
-# Trae AI Agent System Skills and Rules System: Product Overview
+# Trae AI Agent Enhancements Skills and Rules System: Product Overview
 
 > **Document Version:** v1.1 | **Last Updated:** 2026-04-30 | **Author:** MorningStar0709
 >

@@ -1,4 +1,4 @@
-# Trae AI Agent System
+# Trae AI Agent Enhancements
 
 [![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)](https://www.trae.ai/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -10,7 +10,7 @@
 
 ## About This Project
 
-**Trae AI Agent System** is an AI Agent enhancement system for [Trae IDE](https://www.trae.ai/). It provides Rule-based routing, professional Skills, and persistent Memory capabilities — transforming your Agent from "can do anything but unstable" to "fast when simple, rigorous when complex, always learning".
+**Trae AI Agent Enhancements** is a Trae AI Agent rules and skills collection for [Trae IDE](https://www.trae.ai/). It provides Rule-based routing, professional Skills, and persistent Memory capabilities — transforming your Agent from "can do anything but unstable" to "fast when simple, rigorous when complex, always learning".
 
 ## Architecture
 

@@ -1,4 +1,4 @@
-# Trae AI Agent System 技能与规则体系：产品全景文档
+# Trae AI Agent Enhancements 技能与规则体系：产品全景文档
 
 > **文档版本:** v1.1 | **更新日期:** 2026-04-30 | **作者:** MorningStar0709
 >

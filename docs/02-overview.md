@@ -1,4 +1,4 @@
-# Trae AI Agent System: Make Your Agent Smarter and More Reliable
+# Trae AI Agent Enhancements: Make Your Agent Smarter and More Reliable
 
 > A Trae AI Agent rules and skills collection.
 >
