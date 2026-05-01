@@ -113,7 +113,7 @@ function verifySkillsCopied(srcCount, dest) {
       `\n  这通常是 npx 缓存目录权限或路径问题。请尝试：\n` +
       `    1. 清理缓存后重试: npm cache clean --force && npx trae-agent-system\n` +
       `    2. 或全局安装: npm i -g trae-agent-system && trae-agent-system\n` +
-      `    3. 或手动克隆复制: git clone https://github.com/MorningStar0709/trae-agent-system.git`
+      `    3. 或手动克隆复制: git clone https://github.com/MorningStar0709/trae-agent-enhancements.git`
     );
   }
 }
@@ -152,7 +152,7 @@ function showHelp() {
       国际版（trae.ai）  → ~/.trae/rules/  + ~/.trae/skills/
 
   官方文档：https://docs.trae.cn/ide/skills
-  项目：https://github.com/MorningStar0709/trae-agent-system
+  项目：https://github.com/MorningStar0709/trae-agent-enhancements
 `);
 }
 

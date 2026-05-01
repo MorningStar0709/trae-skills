@@ -29,9 +29,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/MorningStar0709/trae-agent-system.git"
+    "url": "https://github.com/MorningStar0709/trae-agent-enhancements.git"
   },
-  "homepage": "https://github.com/MorningStar0709/trae-agent-system",
+  "homepage": "https://github.com/MorningStar0709/trae-agent-enhancements",
   "author": "MorningStar0709",
   "license": "MIT",
   "engines": {

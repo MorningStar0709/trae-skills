@@ -72,17 +72,17 @@ npx trae-agent-system --help             # 查看帮助
 
 ```
 # 克隆仓库
-git clone https://github.com/MorningStar0709/trae-agent-system.git
+git clone https://github.com/MorningStar0709/trae-agent-enhancements.git
 
 # 选择你的版本，复制到对应目录
 
 # 国内版（trae.cn）
-cp -r trae-agent-system/rules  ~/.trae-cn/rules
-cp -r trae-agent-system/skills ~/.trae-cn/skills
+cp -r trae-agent-enhancements/rules  ~/.trae-cn/rules
+cp -r trae-agent-enhancements/skills ~/.trae-cn/skills
 
 # 国际版（trae.ai）
-cp -r trae-agent-system/rules  ~/.trae/rules
-cp -r trae-agent-system/skills ~/.trae/skills
+cp -r trae-agent-enhancements/rules  ~/.trae/rules
+cp -r trae-agent-enhancements/skills ~/.trae/skills
 ```
 
 ### 试试这些指令

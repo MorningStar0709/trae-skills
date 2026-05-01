@@ -72,17 +72,17 @@ Some skills require the following MCP Servers for full functionality:
 
 ```
 # Clone the repository
-git clone https://github.com/MorningStar0709/trae-agent-system.git
+git clone https://github.com/MorningStar0709/trae-agent-enhancements.git
 
 # Choose your edition and copy to the corresponding directory
 
 # China edition (trae.cn)
-cp -r trae-agent-system/rules  ~/.trae-cn/rules
-cp -r trae-agent-system/skills ~/.trae-cn/skills
+cp -r trae-agent-enhancements/rules  ~/.trae-cn/rules
+cp -r trae-agent-enhancements/skills ~/.trae-cn/skills
 
 # International edition (trae.ai)
-cp -r trae-agent-system/rules  ~/.trae/rules
-cp -r trae-agent-system/skills ~/.trae/skills
+cp -r trae-agent-enhancements/rules  ~/.trae/rules
+cp -r trae-agent-enhancements/skills ~/.trae/skills
 ```
 
 ### Try These Commands

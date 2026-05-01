@@ -7,7 +7,7 @@
 ### 启用步骤
 
 1. **访问仓库设置**
-   - 打开 https://github.com/MorningStar0709/trae-agent-system/settings/pages
+   - 打开 https://github.com/MorningStar0709/trae-agent-enhancements/settings/pages
 
 2. **配置 GitHub Pages**
    - **Source**: 选择 `Deploy from a branch`
@@ -20,7 +20,7 @@
 
 4. **等待部署**
    - 部署通常需要 1-2 分钟
-   - 访问 https://MorningStar0709.github.io/trae-agent-system 查看效果
+   - 访问 https://MorningStar0709.github.io/trae-agent-enhancements 查看效果
 
 ## 页面结构
 
