@@ -36,8 +36,9 @@
 
 ### 方式一：npm 安装（推荐）
 
+在任何目录下运行即可（全局安装到用户主目录，所有项目可用）：
+
 ```
-cd /your/project
 npx trae-agent-system
 ```
 

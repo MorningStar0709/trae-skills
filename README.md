@@ -36,8 +36,9 @@ User Input → Rules (Routing & Constraints) → Skills (Execution) → Memory (
 
 ### Method 1: npm install (Recommended)
 
+Run this anywhere (installs to your home directory, global for all projects):
+
 ```
-cd /your/project
 npx trae-agent-system
 ```
 
