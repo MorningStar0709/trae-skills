@@ -21,7 +21,7 @@ User Input → Rules (Routing & Constraints) → Skills (Execution) → Memory (
 | Layer | Count | Responsibility |
 |:------|:------|:---------------|
 | **Rules** | 8 | Routing decisions, behavior constraints, environment handling |
-| **Skills** | 35 | Professional toolboxes covering design → coding → debugging → commit → completion |
+| **Skills** | 33 | Professional toolboxes covering design → coding → debugging → commit → completion |
 | **Memory** | Core Memory | Cross-session knowledge accumulation |
 
 ## Core Features

@@ -104,6 +104,39 @@ Two scopes: user (cross-project global) and project (current repo only), each ma
 - Rule body mainly contains "if X, use Y" decision statements
 - Operation details (commands, parameters, paths) belong to Skill content
 
+### 2.2 Complete System Overview
+
+#### Five-Layer Core Pipeline
+
+| Layer | Components | Responsibility |
+|:------|:-----------|:---------------|
+| **Infrastructure** (6 Metaskills) | self-improvement / creating-trae-rules / skill-creator / skill-stability-review / skill-language-policy / discovering-subagent-capabilities | Maintain the system itself — learning, rule management, Skill management |
+| **Guardrails** (8 Rules) | 4 alwaysApply + 4 conditional trigger | Routing decisions, behavior constraints, environment handling |
+| **Design & Planning** (2 Skills) | brainstorming → writing-plans | Clarify fuzzy requirements, break stable designs into executable plans |
+| **Execution** (7 Skills) | executing-plans / subagent-driven-development / workflow-runner / TDD / systematic-debugging / dispatching-parallel-agents / using-git-worktrees | Plan execution, debugging, test-driven development |
+| **Verification & Review** (3 Skills) | verification-before-completion → requesting-code-review → receiving-code-review | Evidence-based verification, independent review, feedback processing |
+| **Completion** (2 Skills) | git-commit → finishing-a-development-branch | Standardized commits, branch wrap-up |
+
+#### Routing Flow (S/M/L Three-Tier Path)
+
+| Tier | Routing Path | Applicable Scenarios |
+|:-----|:-------------|:---------------------|
+| **S (Small)** | Implement → verification → finishing-branch | ≤3 files, mechanical changes, no risk triggers |
+| **M (Medium)** | writing-plans → executing-plans/subagent-driven → verify → review → re-verify → commit → finish | 4-10 files, non-trivial but design clear |
+| **L (Large)** | brainstorming → [enter M path] | Cross-module, fuzzy requirements, architecture changes |
+
+#### Tools Layer / Specialized Skills (13 pluggable)
+
+| Category | Skills |
+|:---------|:-------|
+| **Browser Debugging** | chrome-devtools / a11y-debugging / memory-leak-debugging / debug-optimize-lcp |
+| **Frontend & Design** | frontend-design / visual-brainstorming |
+| **Charts** | chart-visualization |
+| **Search & Docs** | everything-search / find-docs |
+| **Chinese / Domestic** | chinese-copywriting / chinese-git-workflow |
+| **Troubleshooting** | troubleshooting |
+| **Agent Architecture** | agent-blueprint-architect |
+
 ---
 
 ## 3. Rules Layer Deep Dive
@@ -594,12 +627,12 @@ This system's correctness and stability continuously verified via:
 
 | Verification Dimension | Method | Status |
 |:-----------------------|:-------|:-------|
-| **Name Consistency** | Item-by-item comparison: 35 Skills' directory names ↔ `name` field ↔ routing table references ↔ cross-skill cross-references | 35/35 consistent, 50+ references unbroken |
+| **Name Consistency** | Item-by-item comparison: 33 Skills' directory names ↔ `name` field ↔ routing table references ↔ cross-skill cross-references | 33/33 consistent, 50+ references unbroken |
 | **Routing Completeness** | Verify each routing table reference's skill name → corresponding SKILL.md `name` field → no ambiguity in `description` | 10 routing paths all reachable, 3 high-risk combinations (executing/subagent, requesting/receiving review, brainstorming/writing-plans) have clear boundaries |
 | **Context Payload Matching** | Verify producers (writing-plans, systematic-debugging) output fields correctly consumed by consumers (executing-plans, subagent-driven-development, TDD) | Field-to-field complete match, no orphaned output/input fields |
 | **Rule Format Compliance** | Check frontmatter, description, alwaysApply boolean, line limits against creating-trae-rules standards | 8 rules all compliant, 4 alwaysApply all ≤30 lines |
 | **Eval Regression Cases** | Core path Skills (brainstorming, writing-plans, executing-plans, subagent-driven-development, workflow-runner) provide golden path + boundary + regression three-type evals | 5 Skills × several cases, covering correct triggers and reject triggers |
-| **Failure Mode Coverage** | Each Skill's Failure Handling section covers 3-8 failure scenarios with clear degradation paths defined | ~150+ failure scenarios defined across 35 Skills |
+| **Failure Mode Coverage** | Each Skill's Failure Handling section covers 3-8 failure scenarios with clear degradation paths defined | ~150+ failure scenarios defined across 33 Skills |
 | **Git Traceability** | Track rule iteration and boundary calibration via git commit history | Multi-round optimization traceable (routing rules 5 rounds, completion gates 3 rounds, guardrail red lines 4 rounds) |
 
 > **Note**: Eval cases stored as JSON files in each Skill's `evals/evals.json`, format `prompt → expected_output`, for manual regression review not CI auto-execution. Can be upgraded to gate if auto-execution environment available.
@@ -610,7 +643,7 @@ This system's correctness and stability continuously verified via:
 
 ### ✅ Completed
 - Rule three-layer system established (routing/execution/decision boundaries)
-- Complete skill library covering 35 skills
+- Complete skill library covering 33 skills
 - Core Memory management system
 - Agent self-evolution mechanism
 - **Trae IDE platform adaptation**: 4 Rule activation modes fully covered, SKILL.md contract template, Windows PowerShell command standards, MCP degradation chain, IDE built-in toolset integration
@@ -636,7 +669,7 @@ This system's correctness and stability continuously verified via:
 | Platform Feature | Adaptation in This System | Corresponding Component |
 |:-----------------|:-------------------------|:------------------------|
 | **Rule Frontmatter** | Four activation modes precisely control rule loading | All 8 rule files |
-| **SKILL.md Contract** | Standardized SKILL.md template (name/description → Input → Execution → Failure → Output → Integration) | All 35 skills |
+| **SKILL.md Contract** | Standardized SKILL.md template (name/description → Input → Execution → Failure → Output → Integration) | All 33 skills |
 | **`manage_core_memory` tool** | Knowledge / Rule / Experience categorized storage + capacity management | self-improvement skill |
 | **`Task` subagent** | Pre-flight → dispatch → four-state return | subagent-driven-development / dispatching-parallel-agents |
 | **`Skill` tool** | Agent auto-matches description to trigger skills | All skills |
@@ -664,7 +697,7 @@ This system makes the following specialized designs for Chinese development team
 
 | Scenario | Adaptation Design | Corresponding Component |
 |:---------|:------------------|:------------------------|
-| **Natural language triggers** | Skill description embeds Chinese trigger phrases ("帮我提交" "逐步排查" "按规范提交") | All 35 skills |
+| **Natural language triggers** | Skill description embeds Chinese trigger phrases ("帮我提交" "逐步排查" "按规范提交") | All 33 skills |
 | **Commit message format** | Hybrid Conventional Commit: `type` English + `scope/body` Chinese | git-commit skill |
 | **Domestic Git platforms** | `finishing-a-development-branch` detects remote type via `git remote -v` and routes (GitHub CLI, others web UI); `chinese-git-workflow` provides config command library on-demand | finishing-a-development-branch, chinese-git-workflow |
 | **Mixed Chinese/English** | Docs written in Chinese, technical identifiers in English, auto-handle spaces and punctuation | chinese-copywriting skill, this doc |

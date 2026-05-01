@@ -45,6 +45,41 @@
 
 ---
 
+## 零、完整体系一览
+
+### 1. 五层核心体系（开发流水线）
+
+| 层 | 包含组件 | 职责 |
+|:---|:---------|:-----|
+| **基础设施层**（6 个 Metaskill） | self-improvement / creating-trae-rules / skill-creator / skill-stability-review / skill-language-policy / discovering-subagent-capabilities | 维护系统本身——学习沉淀、规则管理、Skill 管理 |
+| **护栏层**（8 条 Rule） | 4 条 alwaysApply + 4 条条件触发 | 路由决策、行为约束（T-Shirt 分档、提问阈值、强制升级）、环境处理（终端纪律、MCP 降级、端口恢复） |
+| **设计/规划层**（2 个 Skill） | brainstorming → writing-plans | 需求模糊时先设计，设计稳定后拆计划 |
+| **执行层**（7 个 Skill） | executing-plans / subagent-driven-development / workflow-runner / test-driven-development / systematic-debugging / dispatching-parallel-agents / using-git-worktrees | 按计划执行、调试定位、测试驱动、并行只读分析 |
+| **验证/审查层**（3 个 Skill） | verification-before-completion → requesting-code-review → receiving-code-review | 证据化验证、独立审查、反馈落地 |
+| **收尾层**（2 个 Skill） | git-commit → finishing-a-development-branch | 规范提交、分支收尾（合并/PR/保留/丢弃） |
+
+### 2. 路由流程（S/M/L 三级路径）
+
+| 级别 | 路由路径 | 适用场景 |
+|:-----|:---------|:---------|
+| **S（小任务）** | 实现 → `verification` → `finishing-branch` | ≤3 文件、机械变更、无风险触发 |
+| **M（中任务）** | `writing-plans` → `executing-plans`/`subagent-driven` → 验证 → 审查 → 再验证 → 提交 → 收尾 | 4-10 文件、非平凡但设计明确 |
+| **L（大任务）** | `brainstorming` → [进入 M 路径] | 跨模块、需求模糊、架构变更 |
+
+### 3. 工具层 / 专项 Skill（13 个独立可插拔）
+
+| 类别 | Skill 列表 |
+|:-----|:-----------|
+| **浏览器调试** | chrome-devtools / a11y-debugging / memory-leak-debugging / debug-optimize-lcp |
+| **前端/设计** | frontend-design / visual-brainstorming |
+| **图表** | chart-visualization |
+| **搜索/文档** | everything-search / find-docs |
+| **中文/国内** | chinese-copywriting / chinese-git-workflow |
+| **故障排查** | troubleshooting |
+| **Agent 架构** | agent-blueprint-architect |
+
+---
+
 ## 二、Rules（规则层）
 
 规则文件存放在 `.trae/rules/`，通过 YAML frontmatter 控制加载行为。

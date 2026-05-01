@@ -8,7 +8,7 @@
 
 ## One-Line Summary
 
-**35 Skills + 8 Rules + Memory System** — transforms your AI Agent from "can do anything but unstable" to "fast when simple, rigorous when complex, always learning".
+**33 Skills + 8 Rules + Memory System** — transforms your AI Agent from "can do anything but unstable" to "fast when simple, rigorous when complex, always learning".
 
 ---
 
@@ -49,7 +49,7 @@ Many "Agent enhancement packs" are just prompt collections. Our system has deepe
 
 **Rule + Skill Dual-Wheel Drive**: Rules act like traffic police deciding "which path to take", Skills act like professional toolboxes handling "how to do it". Each does its job without interfering.
 
-**Fully Compliant with Trae Official Specs**: Our 35 skills + 8 rules strictly follow Trae's frontmatter spec, SKILL.md contract template, and 250-character description limit. Can serve as a **best practice reference**.
+**Fully Compliant with Trae Official Specs**: Our 33 skills + 8 rules strictly follow Trae's frontmatter spec, SKILL.md contract template, and 250-character description limit. Can serve as a **best practice reference**.
 
 **Original Decision Mechanisms**: T-Shirt sizing (4-dimension task scoring) and question thresholds (when to ask users, when not to) are original designs by this system. Trae won't have these built-in — we designed them based on observed pain points.
 
@@ -73,7 +73,7 @@ Many "Agent enhancement packs" are just prompt collections. Our system has deepe
 
 **Rules Layer** — 8 "traffic rules" telling the Agent what it can/can't do and when to ask users. 4 are always-on, 4 are scenario-triggered.
 
-**Skills Layer** — 35 "professional toolboxes" covering requirement clarification, design planning, code implementation, debugging, code review, commit management, branch completion, knowledge accumulation, browser debugging, accessibility auditing, data visualization, frontend design...
+**Skills Layer** — 33 "professional toolboxes" covering requirement clarification, design planning, code implementation, debugging, code review, commit management, branch completion, knowledge accumulation, browser debugging, accessibility auditing, data visualization, frontend design...
 
 **Memory Layer (Core Memory)** — Agent's "notebook". Knowledge stores facts, Rule stores preferences, Experience stores lessons. Auto-loaded in new conversations, no need to start from scratch.
 

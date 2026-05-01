@@ -64,7 +64,7 @@ brainstorming → writing-plans → executing-plans → verification-before-comp
 | Core Memory（20 条上限、自动淘汰） | `self-improvement` 主动管理记忆质量 | 互补 |
 | `manage_core_memory` 工具 | 封装为 Knowledge/Rule/Experience 三层 | 增强 |
 | `Task` 子代理 | 预检→分派→两层审查完整闭环 | 增强 |
-| `Skill` 自动匹配 | 中英双语 description，35 个契约化 SKILL.md | 适配 |
+| `Skill` 自动匹配 | 中英双语 description，33 个契约化 SKILL.md | 适配 |
 | IDE 工具集 | 终端纪律规范 + MCP 降级 | 规范 |
 | Rule Frontmatter | 4 激活模式全覆盖 + 质量标准 | 遵循 |
 
@@ -80,7 +80,7 @@ brainstorming → writing-plans → executing-plans → verification-before-comp
 - 自动化审查：`skill-stability-review` 内置 16 维审查脚本（review_skills.py，888 行），自动检查每一条 rule 和 skill 的合规性
 - 三层元技能保障：`creating-trae-rules` 指导写规则、`skill-creator` 指导写 Skill、`skill-language-policy` 规范语言
 
-**设计价值**：35 个技能 + 8 条规则本身就是"如何按 Trae 规范创建"的活教材。用户新写规则时直接参考即可。
+**设计价值**：33 个技能 + 8 条规则本身就是"如何按 Trae 规范创建"的活教材。用户新写规则时直接参考即可。
 
 ### 2.4 原创决策机制：T-Shirt 分档 + 提问阈值
 
@@ -147,7 +147,7 @@ System Prompt → 复制到 Trae UI 的系统提示词输入框
 
 **Windows 适配**：全部命令 PowerShell 语法，端口冲突恢复封装为独立规则，路径、文件搜索按 Windows 习惯编写。
 
-**Python 脚本可移植架构**：不受平台依赖的工具逻辑（review_skills.py、quick_validate.py、image_tool.py）统一用 Python 实现。Python 天然跨平台，`Path.resolve()` + `subprocess.run()` 避开 Windows 编码和路径坑。
+**Python 脚本可移植架构**：不受平台依赖的工具逻辑（review_skills.py、quick_validate.py）统一用 Python 实现。Python 天然跨平台，`Path.resolve()` + `subprocess.run()` 避开 Windows 编码和路径坑。
 
 **设计价值**：对中文用户不是"[用中文回复]"，是系统的分层中英文隔离。对 Windows 不是"加几条 PowerShell 命令"，是从架构层面确保一致的执行体验。
 

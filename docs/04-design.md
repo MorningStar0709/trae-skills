@@ -64,7 +64,7 @@ brainstorming → writing-plans → executing-plans → verification-before-comp
 | Core Memory (20-entry limit, auto-eviction) | `self-improvement` proactively manages memory quality | Complementary |
 | `manage_core_memory` tool | Encapsulated as Knowledge/Rule/Experience three-tier | Enhanced |
 | `Task` subagent | Pre-flight → dispatch → two-layer review complete loop | Enhanced |
-| `Skill` auto-match | Bilingual description, 35 contract-based SKILL.md | Adapted |
+| `Skill` auto-match | Bilingual description, 33 contract-based SKILL.md | Adapted |
 | IDE toolset | Terminal discipline standards + MCP degradation | Standardized |
 | Rule Frontmatter | 4 activation modes fully covered + quality standards | Compliant |
 
@@ -80,7 +80,7 @@ brainstorming → writing-plans → executing-plans → verification-before-comp
 - Automated review: `skill-stability-review` built-in 16-dimension review script (review_skills.py, 888 lines), automatically checks each rule and skill compliance
 - Three-tier meta-skill guarantee: `creating-trae-rules` guides rule writing, `skill-creator` guides Skill writing, `skill-language-policy` standardizes language
 
-**Design Value**: 35 skills + 8 rules are themselves living textbooks on "how to create according to Trae specs". Users can directly reference when writing new rules.
+**Design Value**: 33 skills + 8 rules are themselves living textbooks on "how to create according to Trae specs". Users can directly reference when writing new rules.
 
 ### 2.4 Original Decision Mechanisms: T-Shirt Sizing + Question Thresholds
 
@@ -147,7 +147,7 @@ Additionally, there are **Red/Green Line Lists** — setting "red lines" (absolu
 
 **Windows Adaptation**: All commands use PowerShell syntax, port conflict recovery encapsulated as independent rules, paths and file search written according to Windows conventions.
 
-**Python Script Portable Architecture**: Platform-independent tool logic (review_skills.py, quick_validate.py, image_tool.py) uniformly implemented in Python. Python is naturally cross-platform, `Path.resolve()` + `subprocess.run()` avoids Windows encoding and path pitfalls.
+**Python Script Portable Architecture**: Platform-independent tool logic (review_skills.py, quick_validate.py) uniformly implemented in Python. Python is naturally cross-platform, `Path.resolve()` + `subprocess.run()` avoids Windows encoding and path pitfalls.
 
 **Design Value**: For Chinese users, not just "[reply in Chinese]", but system's layered Chinese/English isolation. For Windows, not just "add a few PowerShell commands", but consistent execution experience guaranteed at the architectural level.
 

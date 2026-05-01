@@ -50,6 +50,10 @@ Desktop.ini
 .trae/
 *.trae-skill-disabled
 
+# Skills excluded from distribution (depend on local API or external CLI tools)
+skills/mineru-to-md/
+skills/image-manipulation-python-magick/
+
 # Logs
 *.log
 logs/

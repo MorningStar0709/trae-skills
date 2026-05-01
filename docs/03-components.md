@@ -45,6 +45,41 @@ Command failure / user correction / best practice discovery / knowledge gap → 
 
 ---
 
+## 0. Complete System Overview
+
+### 1. Five-Layer Core Pipeline
+
+| Layer | Components | Responsibility |
+|:------|:-----------|:---------------|
+| **Infrastructure** (6 Metaskills) | self-improvement / creating-trae-rules / skill-creator / skill-stability-review / skill-language-policy / discovering-subagent-capabilities | Maintain the system itself — learning, rule management, Skill management |
+| **Guardrails** (8 Rules) | 4 alwaysApply + 4 conditional trigger | Routing decisions, behavior constraints (T-Shirt sizing, question thresholds, forced escalation), environment handling (terminal discipline, MCP degradation, port recovery) |
+| **Design & Planning** (2 Skills) | brainstorming → writing-plans | Clarify fuzzy requirements, break stable designs into executable plans |
+| **Execution** (7 Skills) | executing-plans / subagent-driven-development / workflow-runner / test-driven-development / systematic-debugging / dispatching-parallel-agents / using-git-worktrees | Plan execution, debugging, test-driven development, parallel read-only analysis |
+| **Verification & Review** (3 Skills) | verification-before-completion → requesting-code-review → receiving-code-review | Evidence-based verification, independent review, feedback processing |
+| **Completion** (2 Skills) | git-commit → finishing-a-development-branch | Standardized commits, branch wrap-up (merge/PR/keep/discard) |
+
+### 2. Routing Flow (S/M/L Three-Tier Path)
+
+| Tier | Routing Path | Applicable Scenarios |
+|:-----|:-------------|:---------------------|
+| **S (Small)** | Implement → `verification` → `finishing-branch` | ≤3 files, mechanical changes, no risk triggers |
+| **M (Medium)** | `writing-plans` → `executing-plans`/`subagent-driven` → verify → review → re-verify → commit → finish | 4-10 files, non-trivial but design clear |
+| **L (Large)** | `brainstorming` → [enter M path] | Cross-module, fuzzy requirements, architecture changes |
+
+### 3. Tools Layer / Specialized Skills (13 pluggable)
+
+| Category | Skills |
+|:---------|:-------|
+| **Browser Debugging** | chrome-devtools / a11y-debugging / memory-leak-debugging / debug-optimize-lcp |
+| **Frontend & Design** | frontend-design / visual-brainstorming |
+| **Charts** | chart-visualization |
+| **Search & Docs** | everything-search / find-docs |
+| **Chinese / Domestic** | chinese-copywriting / chinese-git-workflow |
+| **Troubleshooting** | troubleshooting |
+| **Agent Architecture** | agent-blueprint-architect |
+
+---
+
 ## 2. Rules Layer
 
 Rules are stored in `.trae/rules/`, controlled by YAML frontmatter.
