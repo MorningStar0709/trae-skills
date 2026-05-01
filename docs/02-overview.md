@@ -1,31 +1,31 @@
-# Trae AI Agent OS: Make Your Agent Smarter and More Reliable
+# Trae AI Agent System: Make Your Agent Smarter and More Reliable
 
 > An AI Agent enhancement system for Trae IDE. No plugins, no scripts — just drop it into your project and it works.
 >
 > Quick intro: [01-intro.md](./01-intro.md) | Complete overview: [05-architecture.md](./05-architecture.md) | Quick reference: [03-components.md](./03-components.md)
 
----
+***
 
 ## One-Line Summary
 
 **33 Skills + 8 Rules + Memory System** — transforms your AI Agent from "can do anything but unstable" to "fast when simple, rigorous when complex, always learning".
 
----
+***
 
 ## What It Solves
 
-| Agent's Common Mistakes | Our Solution |
-|:------------------------|:-------------|
-| Starts coding before clarifying requirements | **brainstorming** skill — ask first, then act |
-| "Blind guess" fixes that hide the real problem | **systematic-debugging** — requires evidence before fixing |
+| Agent's Common Mistakes                           | Our Solution                                                        |
+| :------------------------------------------------ | :------------------------------------------------------------------ |
+| Starts coding before clarifying requirements      | **brainstorming** skill — ask first, then act                       |
+| "Blind guess" fixes that hide the real problem    | **systematic-debugging** — requires evidence before fixing          |
 | Treats core config changes the same as text edits | **T-Shirt sizing + Forced escalation** — differentiate by task size |
-| Says "it's done" without running tests | **verification-before-completion** — no verification, no completion |
-| Asks too much or too little | **question-threshold** — ask when needed, stay silent otherwise |
-| Forgets how to resolve port conflicts | **self-improvement** — automatically remembers lessons |
-| New conversation = start from scratch | **Core Memory** — cross-session experience accumulation |
-| Suggests refactoring just to view a file | **change-proposal-threshold** — evaluate before proposing |
+| Says "it's done" without running tests            | **verification-before-completion** — no verification, no completion |
+| Asks too much or too little                       | **question-threshold** — ask when needed, stay silent otherwise     |
+| Forgets how to resolve port conflicts             | **self-improvement** — automatically remembers lessons              |
+| New conversation = start from scratch             | **Core Memory** — cross-session experience accumulation             |
+| Suggests refactoring just to view a file          | **change-proposal-threshold** — evaluate before proposing           |
 
----
+***
 
 ## Three Key Highlights
 
@@ -41,7 +41,7 @@ Every line of code requires verification: tests pass, build succeeds, bug reprod
 
 Every time a new problem arises, the Agent automatically stores lessons in long-term memory. Next time the same port conflict or environment issue appears — no need to search again, it already remembers. This mechanism builds on Trae's native memory system without breaking it, actively managing memory quality for mutual benefit.
 
----
+***
 
 ## Design Philosophy: Not Just Another Prompt Collection
 
@@ -57,7 +57,7 @@ Many "Agent enhancement packs" are just prompt collections. Our system has deepe
 
 **Continuously Refined Execution Contracts**: Each Skill includes Input Contract, Do Not Use boundaries, Failure Handling degradation paths, and Integration upstream-downstream declarations. Each skill underwent 3-5 rounds of iteration with git-traceable history. Not one-off prompts, but ongoing engineering investment.
 
----
+***
 
 ## Special Considerations for Chinese Developers
 
@@ -67,7 +67,7 @@ Many "Agent enhancement packs" are just prompt collections. Our system has deepe
 - Skill docs: English for machine-readable fields, Chinese for human-readable instructions
 - Full Windows environment adaptation: PowerShell syntax, port conflict recovery, path conventions
 
----
+***
 
 ## Brief Overview
 
@@ -77,7 +77,7 @@ Many "Agent enhancement packs" are just prompt collections. Our system has deepe
 
 **Memory Layer (Core Memory)** — Agent's "notebook". Knowledge stores facts, Rule stores preferences, Experience stores lessons. Auto-loaded in new conversations, no need to start from scratch.
 
----
+***
 
 ## Quick Try
 
@@ -93,8 +93,9 @@ After starting a conversation, try these commands:
 
 The Agent will automatically match the corresponding skills and rules to complete.
 
----
+***
 
 > Project source: all code under the `.trae/` directory.
 >
 > More: [01-intro.md](./01-intro.md) (quick intro) | [04-design.md](./04-design.md) (design philosophy) | [05-architecture.md](./05-architecture.md) (complete overview) | [03-components.md](./03-components.md) (quick reference)
+
