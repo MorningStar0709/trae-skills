@@ -1,6 +1,6 @@
 {
   "name": "trae-agent-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Trae AI Agent System — 为 Trae IDE 打造的 AI Agent 增强系统：33 个专业技能 + 8 条行为规则，让 AI Agent 更稳定、更专业",
   "type": "module",
   "bin": {
