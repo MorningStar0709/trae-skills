@@ -21,8 +21,8 @@ User Input → Rules (Routing & Constraints) → Skills (Execution) → Memory (
 | Layer | Count | Responsibility |
 |:------|:------|:---------------|
 | **Rules** | 8 | Routing decisions, behavior constraints, environment handling |
-| **Skills** | 33 | Professional toolboxes covering design → coding → debugging → commit → completion |
-| **Memory** | Core Memory | Cross-session knowledge accumulation |
+| **Skills** | 34 | Professional toolboxes covering design → coding → debugging → commit → completion → memory |
+| **Memory** | Core Memory + MCP Memory | Cross-session knowledge accumulation via dual-track system |
 
 ## Core Features
 
@@ -65,8 +65,27 @@ Some skills require the following MCP Servers for full functionality:
 |:-----------|:--------|:-------------|
 | **Everything Search** | Windows local file search | Add in Trae Settings → MCP, see everything-search skill for config |
 | **Chrome DevTools MCP** | Browser automation, Console/Network/DOM debugging, performance analysis | Add `npx chrome-devtools-mcp` in Trae Settings → MCP |
+| **MCP Memory Server** | Cross-session persistent memory via knowledge graph | Add in Trae Settings → MCP (see config below) |
 
-> These MCPs power the `everything-search` and `chrome-devtools` skills. Without them, related skills will not work.
+> These MCPs power the `everything-search`, `chrome-devtools`, and `memory-kernel` skills. Without them, related skills will not work fully.
+
+> If you are using Trae Solo, you may already have built-in MCP Memory — check before installing manually.
+
+**MCP Memory Server config (add to Trae Settings → MCP):**
+
+```json
+{
+  "mcpServers": {
+    "memory": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@modelcontextprotocol/server-memory"],
+      "env": {
+        "MEMORY_FILE_PATH": "D:/AppData/Memory/memory.jsonl"
+      }
+    }
+  }
+}
+```
 
 ### Method 2: Manual Install
 
@@ -120,6 +139,7 @@ cp -r trae-agent-enhancements/skills ~/.trae/skills
 | **Orchestration** | dispatching-parallel-agents, workflow-runner, find-docs |
 | **Browser & Frontend** | chrome-devtools, frontend-design, chart-visualization, a11y-debugging |
 | **Meta Skills** | skill-creator, skill-stability-review, skill-language-policy, creating-trae-rules |
+| **Memory & Learning** | memory-kernel, self-improvement |
 
 ## Windows/Trae Adaptation
 
@@ -127,6 +147,7 @@ cp -r trae-agent-enhancements/skills ~/.trae/skills
 - **Port Recovery**: netstat → taskkill → verify → retry
 - **Path Conventions**: Forward slashes in globs, absolute paths with backslashes
 - **Core Memory**: 20-entry limit per scope, auto-eviction for stale entries
+- **MCP Memory**: Knowledge graph persistence via MCP Memory Server, path `D:/AppData/Memory/memory.jsonl`
 
 ## Acknowledgments
 

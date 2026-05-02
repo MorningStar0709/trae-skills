@@ -21,8 +21,8 @@
 | 层级 | 数量 | 职责 |
 |:-----|:-----|:-----|
 | **规则（Rules）** | 8 条 | 路由决策、行为约束、环境处理 |
-| **技能（Skills）** | 33 个 | 专业工具箱，覆盖设计→编码→调试→提交→收尾 |
-| **记忆（Memory）** | 核心记忆 | 跨会话知识积累 |
+| **技能（Skills）** | 34 个 | 专业工具箱，覆盖设计→编码→调试→提交→收尾→记忆 |
+| **记忆（Memory）** | 核心记忆 + MCP 记忆 | 跨会话知识积累，双轨制持久化 |
 
 ## 核心亮点
 
@@ -65,8 +65,27 @@ npx trae-agent-enhancements --help             # 查看帮助
 |:-----------|:-----|:---------|
 | **Everything Search** | Windows 本地文件快速搜索 | 在 Trae 设置 → MCP 中添加，配置参考 everything-search skill |
 | **Chrome DevTools MCP** | 浏览器自动化、Console/Network/DOM 调试、性能分析 | 在 Trae 设置 → MCP 中添加 `npx chrome-devtools-mcp` |
+| **MCP Memory Server** | 跨会话持久记忆（知识图谱） | 在 Trae 设置 → MCP 中添加（配置见下方）|
 
-> 这两个 MCP 使能 `everything-search` 和 `chrome-devtools` 等技能的核心功能。如不安装，相关技能将无法使用。
+> 这三个 MCP 使能 `everything-search`、`chrome-devtools` 和 `memory-kernel` 等技能的核心功能。如不安装，相关技能将无法完整体验。
+
+> 如果你使用的是 Trae Solo，可能已内置 MCP Memory——请在安装前确认。
+
+**MCP Memory Server 配置（添加到 Trae 设置 → MCP）：**
+
+```json
+{
+  "mcpServers": {
+    "memory": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@modelcontextprotocol/server-memory"],
+      "env": {
+        "MEMORY_FILE_PATH": "D:/AppData/Memory/memory.jsonl"
+      }
+    }
+  }
+}
+```
 
 ### 方式二：手动安装
 
@@ -120,6 +139,7 @@ cp -r trae-agent-enhancements/skills ~/.trae/skills
 | **编排/工具** | dispatching-parallel-agents, workflow-runner, find-docs |
 | **浏览器/前端** | chrome-devtools, frontend-design, chart-visualization, a11y-debugging |
 | **元技能** | skill-creator, skill-stability-review, skill-language-policy, creating-trae-rules |
+| **记忆/学习** | memory-kernel, self-improvement |
 
 ## Windows/Trae 适配
 
@@ -127,6 +147,7 @@ cp -r trae-agent-enhancements/skills ~/.trae/skills
 - **端口恢复**：netstat → taskkill → 确认 → 重试
 - **路径规范**：globs 使用正斜杠，绝对路径用反斜杠
 - **核心记忆**：每范围 20 条上限，自动淘汰旧条目
+- **MCP 记忆**：通过 MCP Memory Server 持久化知识图谱，路径 `D:/AppData/Memory/memory.jsonl`
 
 ## 致谢
 
