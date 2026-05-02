@@ -73,7 +73,4 @@ description: Always-active task classification and process routing. Apply T-Shir
 
 - **Alternative entry points**: The flow above is the default development path. The Skill Routing Table handles specialized scenarios (debugging, TDD, code review, git ops, self-improvement) that bypass or re-enter this main path at different points.
 
-- **Subagent Dispatch**: When main agent is deep in context and an independent sub-task arises, consider dispatching to a subagent. See `dispatching-parallel-agents` skill for the full decision table and pre-flight protocol. During M/L execution (e.g., inside `executing-plans` or `subagent-driven-development`), if 2+ independent read-only analysis tasks are identified, `dispatching-parallel-agents` can be inserted as an optimization — it is not part of the fixed flow.
-- **Skill inventory**: Use `skills/*/SKILL.md` as source of truth. Do not maintain a hardcoded list in this rule.
-
 When proposing changes to rules, skills, or configuration, see `change-proposal-threshold.md`.

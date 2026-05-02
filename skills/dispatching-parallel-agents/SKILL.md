@@ -14,6 +14,7 @@ Core principle: Only parallelize truly independent tasks. If tasks have dependen
 ## Use This Skill
 
 - There are 2 or more mutually independent search, review, or browser validation tasks.
+- The main session is deep in context and an isolated sub-task can be offloaded to a subagent.
 - Each task can be clearly described on its own.
 - Tasks do not share file editing state, runtime state, or intermediate results.
 
