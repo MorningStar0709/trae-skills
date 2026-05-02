@@ -130,7 +130,7 @@ cp -r trae-agent-enhancements/skills ~/.trae/skills
 
 ## Acknowledgments
 
-This project references [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) (AI 编程超能力 · 中文增强版) for its npx installation pattern and project structure design. Thanks to [@jnMetaCode](https://github.com/jnMetaCode) for the excellent work.
+This project references [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) (AI 编程超能力 · 中文增强版) for its npx installation pattern and project structure design, and [superpowers](https://github.com/obra/superpowers) as the original upstream. Thanks to [@jnMetaCode](https://github.com/jnMetaCode) and [@obra](https://github.com/obra) for their excellent work.
 
 ## Contributing
 
