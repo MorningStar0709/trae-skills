@@ -7,10 +7,6 @@ description: Use when there are 2 or more independent tasks that can be delegate
 
 ## Overview
 
-Use this skill to determine which tasks are suitable for parallel delegation to independent subagents. Parallel execution requires true independence between tasks and the availability of capable subagent types in the current environment.
-
-Core principle: Only parallelize truly independent tasks. If tasks have dependencies, execute them sequentially.
-
 ## Use This Skill
 
 - There are 2 or more mutually independent search, review, or browser validation tasks.
@@ -43,13 +39,19 @@ Missing input handling:
 Execute in the following order:
 
 1. **Pre-flight: Discover Available Subagents**: Use `discovering-subagent-capabilities` to read the Task tool's `subagent_type` enum from the system prompt. Read each subagent's description and match against the task types. The enum is dynamic — do not assume a fixed set of agent names. If no matching subagent exists for a task type, fallback to inline execution.
-2. **Evaluate Task Boundaries**: Confirm that tasks are truly independent. If they share file edits, runtime state, or have sequential dependencies, abort parallelization.
+2. **Evaluate Task Boundaries**: Run each task through all five conflict checks below. If ANY check fails, abort parallelization — do not proceed.
+
+   | # | Conflict check | Fail condition |
+   |:--|:---------------|:---------------|
+   | 1 | **Same file** | Any two tasks modify the same file path |
+   | 2 | **Same module/state** | Two tasks share the same module, configuration, or runtime state |
+   | 3 | **Sequential dependency** | One task's output is another task's input (must run in order) |
+   | 4 | **Resource contention** | Two tasks require the same port, file lock, environment variable, or API rate-limited endpoint |
+   | 5 | **Transactional boundary** | Two tasks must either both succeed or both roll back to maintain consistency |
 3. **Verify Environment**: Check if the current environment has capable subagents for the task types found in step 1. If code implementation is needed and no reliable implementation subagent exists, fallback to `executing-plans` or sequential execution.
-4. **Check Parallel Conditions**:
-   - The problem can be split into independent sub-problems.
-   - Each sub-problem can be written as a self-contained prompt.
-   - The results from each subagent can be consumed independently.
-   - Starting them simultaneously will not cause resource conflicts (port contention, same-file write locks, same external API rate limit).
+4. **Check Parallel Constraints**:
+   - Each sub-problem must be writable as a self-contained prompt (≤30 words per subagent query).
+   - Parallel dispatch must not exceed 4 concurrent tasks.
 5. **Prepare Prompts**: Write a self-contained prompt for each subagent, including goal, scope, necessary context, expected return content, and constraints. Keep each prompt focused and narrow — if a parallel task is expected to be large (5+ files or broad scope), pre-split it into multiple finer-grained sub-tasks before dispatch. Use the subagent types identified in step 1 to route each task to the best-matching agent.
 6. **Dispatch**: Launch multiple `Task` calls simultaneously in a single tool message, using the `subagent_type` values discovered in step 1. Do not exceed 4 parallel tasks.
 7. **Aggregate**: After subagents return, the main session must aggregate and cross-check the results. Do not treat subagent reports as final facts without verification.
@@ -58,10 +60,16 @@ Execute in the following order:
 ```
 1. Extract key findings from each subagent report.
 2. Compare findings side by side: which points agree, which conflict.
-3. For conflicting claims, evaluate credibility based on:
-   - Did the subagent have access to the necessary context?
-   - Is the claim supported by evidence or just opinion?
-   - Does the claim contradict known facts from other sources?
+3. For conflicting claims, rate credibility per subagent using the table below:
+
+   | Credibility | Criteria |
+   |:------------|:---------|
+   | **High** | Claim is backed by code, error log, test output, or config evidence from the subagent's context |
+   | **Medium** | Claim is reasoned based on project structure or conventions but lacks direct evidence |
+   | **Low** | Claim is opinion-based ("this feels wrong", "I think it might be...") |
+   | **Reject** | Claim directly contradicts known facts from other verified sources |
+
+   When credibility is equal on both sides, flag the conflict for the user.
 4. State the final conclusion per conflict point, with reasoning.
 5. If conflicts cannot be resolved without additional input, flag them for the user.
 ```

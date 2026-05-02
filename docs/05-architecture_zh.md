@@ -491,6 +491,8 @@ S 任务直接跳步骤 2-5（即从步骤 1 直接到步骤 6），走快速通
 
 **阶段一：路由分派（Step 0 → Step 1）**
 
+**Step 0（记忆优先预检）**：通过 `memory-kernel` 查询 MCP 记忆获取项目/模式/用户上下文。如果有足够上下文，跳过项目级全量文件扫描。完整降级链见 [06-memory_zh.md](./06-memory_zh.md)。
+
 用户提出需求后，由 `skill-routing-and-execution-path` 进行 T-Shirt Size 匹配与路由分派：
 
 - 如果涉及 7 类高风险 → `forced-escalation-guardrails` 拦截 S→M

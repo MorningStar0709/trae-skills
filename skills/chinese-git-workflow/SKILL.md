@@ -7,8 +7,6 @@ description: Configure Git for domestic platforms and manage branching strategie
 
 ## Overview
 
-Use this skill to configure Git remotes, SSH authentication, and branching strategies for domestic (Chinese) Git platforms. It addresses common pain points such as unstable access to GitHub and adapting workflows for domestic CI/CD environments.
-
 ## Use This Skill
 
 - When configuring remotes for Gitee, Coding.net, Jihu GitLab, or CNB.

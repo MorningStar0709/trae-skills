@@ -7,8 +7,6 @@ description: Apply professional Chinese copywriting and typography guidelines. U
 
 ## Overview
 
-Use this skill to format and polish Chinese technical content. The goal is to ensure the text looks professional, reads naturally, and avoids "machine-translation" artifacts by enforcing strict typography rules.
-
 **Core Principle:** Typography serves the reading experience, standardization serves consistency.
 
 ## Use This Skill

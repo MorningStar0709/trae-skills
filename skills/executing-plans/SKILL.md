@@ -7,9 +7,7 @@ description: Use when you need to execute a written implementation plan in the c
 
 ## Overview
 
-Load the plan, critically review it, execute all tasks sequentially, and report upon completion.
-
-If the current environment supports implementation-capable subagents, tasks are mostly independent, and you are certain that `subagent-driven-development` can invoke a code-implementing subagent, that is usually a stronger choice. Otherwise, use this skill to execute the plan sequentially in the current conversation.
+Load the plan, execute all tasks sequentially, and report upon completion.
 
 ## Use This Skill
 

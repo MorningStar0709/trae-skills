@@ -491,6 +491,8 @@ Advance sequentially through stages:
 
 **Phase 1: Routing Dispatch (Step 0 → Step 1)**
 
+**Step 0 (Memory-first inquiry)**: Query MCP Memory via `memory-kernel` for existing project/pattern/user context. If sufficient context exists, skip project-wide file scanning. See [06-memory.md](./06-memory.md) for the full degradation chain.
+
 After user proposes requirement, `skill-routing-and-execution-path` performs T-Shirt Size matching and routing:
 
 - If involves 7 high-risk categories → `forced-escalation-guardrails` intercepts, S→M

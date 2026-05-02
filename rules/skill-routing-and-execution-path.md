@@ -23,7 +23,7 @@ description: Always-active task classification and process routing. Apply T-Shir
   **Small (S)** — Direct Path. Do NOT route to `brainstorming` or `writing-plans`.
   **Exception to Escalation**: Even if 4+ files or cross-module, if purely mechanical (copy tweaks, trivial renames, type fixes, one-line config, global path updates), still treat as S.
   **Note — Exception vs Guardrails priority**: The Forced Escalation Guardrails (`forced-escalation-guardrails.md`) take precedence over the Exception to Escalation. If a change is purely mechanical but hits any Guardrails scenario (e.g., auth/security files), the minimum classification is M, not S.
-  **Assessment order**: Score the four dimensions first. Then cross-check the result against the Forced Escalation Guardrails — if any Guardrails scenario is triggered, the minimum classification is M. The final classification is the larger value between the four-dimension result and the Guardrails-implied floor. (E.g., four-dimension result=S, but triggers Guardrails → final=M. Four-dimension result=M, also triggers Guardrails → final=M. Four-dimension result=L, triggers Guardrails → final=L.)
+  **Assessment order**: Execute Step 0 (memory-first inquiry via `memory-kernel`) first. Then score the four dimensions. Then cross-check the result against the Forced Escalation Guardrails — if any Guardrails scenario is triggered, the minimum classification is M. The final classification is the larger value between the four-dimension result and the Guardrails-implied floor. (E.g., four-dimension result=S, but triggers Guardrails → final=M. Four-dimension result=M, also triggers Guardrails → final=M. Four-dimension result=L, triggers Guardrails → final=L.)
   **Medium (M)** — Route to `writing-plans` → `executing-plans`. If behavioral correctness is critical, use `test-driven-development` instead of the entire `writing-plans` → `executing-plans` chain.
   **Large (L/XL)** — Must start with `brainstorming`.
 
@@ -44,8 +44,6 @@ description: Always-active task classification and process routing. Apply T-Shir
   | 2+ independent read-only analysis tasks | `dispatching-parallel-agents` | sequential execution |
   | Command/tool failure, user correction, new insight | `self-improvement` | ignoring the learning |
   | Code review feedback to apply | `receiving-code-review` | blindly accepting comments |
-  | New session, need project context before starting | `memory-kernel` | scanning the entire project from scratch |
-  | "你还记得吗", cross-session memory recall | `memory-kernel` | guessing from current context |
   | "校准记忆" / "同步记忆" | `memory-kernel` (Calibration Mode) | letting memory go stale |
 
 - **Flow Overview (by T-Shirt Size)** — consolidates the complete path from entry to branch wrap-up. The `review-and-completion-gates.md` rule controls gate skipping (S skips code review) and fast-path consolidation (S appends wrap-up guidance directly after verification).
@@ -54,24 +52,24 @@ description: Always-active task classification and process routing. Apply T-Shir
 - **Upward (S→M, M→L)**: Mandatory. If implementation reveals more complexity than expected, reclassify and switch to the corresponding path immediately. Do not persist on the wrong path for sunk cost reasons.
 - **Downward (L→M, M→S)**: Optional. If brainstorming or implementation shows the task is simpler than expected, the agent may reclassify down to reduce process overhead. Not mandatory — stability is preferred over optimization.
 
-  Memory is embedded at three points in every path:
-  - **Entry**: `memory-kernel` read — load cross-session context before starting
+  Memory is embedded at three points. Entry is covered by Step 0 universal pre-check.
+  - **Entry**: Already handled by Step 0
   - **Mid (M/L only)**: `memory-kernel` write — persist interim learnings during long tasks
   - **Exit**: `memory-kernel` write — persist key outcomes after verification
 
   **S (Direct Path):**
-  `[memory-kernel: read]` → `implementation` (direct coding, no specialized skill) → `verification-before-completion` → `[memory-kernel: write if anything cross-session worthy]` → [`finishing-a-development-branch` appended directly]
+  `implementation` (direct coding, no specialized skill) → `verification-before-completion` → `[memory-kernel: write if anything cross-session worthy]` → [`finishing-a-development-branch` appended directly]
   > S path commits after `verification-before-completion` passes (plain `git commit` by default; route to `git-commit` skill if a conventional commit message is preferred).
   > If a debuggable bug is discovered during implementation, switch to `systematic-debugging` (see Skill Routing Table) — the S path is no longer appropriate.
 
   **M (Structured Path):**
-  `[memory-kernel: read]` → `writing-plans` → `executing-plans` or `subagent-driven-development` → (with periodic `memory-kernel: write` during long-running execution) → `verification-before-completion` → `[memory-kernel: write — key outcomes]` → `requesting-code-review`
+  `writing-plans` → `executing-plans` or `subagent-driven-development` → (with periodic `memory-kernel: write` during long-running execution) → `verification-before-completion` → `[memory-kernel: write — key outcomes]` → `requesting-code-review`
   > **Choice rule**: Prefer `executing-plans` when tasks are tightly coupled or the environment lacks reliable implementation subagents. Prefer `subagent-driven-development` when tasks are mostly independent and implementation subagents are available. (`writing-plans` already explains the choice in its execution recommendations.)
     ├── (no feedback) → [`self-improvement` Knowledge Promotion Gate (also writes to MCP Memory via `memory-kernel`)] → `[memory-kernel: write — promotion results]` → `finishing-a-development-branch`
     └── (feedback received) → (`receiving-code-review`) → `verification-before-completion` (if fixes applied) → (`git-commit` if fixes applied) → [`self-improvement` Knowledge Promotion Gate (also writes to MCP Memory)] → `[memory-kernel: write — promotion + fix outcomes]` → `finishing-a-development-branch`
 
   **L (Design-First Path):**
-  `[memory-kernel: read]` → `brainstorming` (with `memory-kernel: write` for design decisions) → [enter M path from `writing-plans` onward; skip `memory-kernel: read` at M entry — already loaded via L entry]
+  `brainstorming` (with `memory-kernel: write` for design decisions) → [enter M path from `writing-plans` onward; no Step 0 re-run at M entry — already loaded]
 
 - **Alternative entry points**: The flow above is the default development path. The Skill Routing Table handles specialized scenarios (debugging, TDD, code review, git ops, self-improvement) that bypass or re-enter this main path at different points.
 

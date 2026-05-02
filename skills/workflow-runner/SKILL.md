@@ -7,14 +7,12 @@ description: Run an agency-orchestrator style YAML workflow inside the current T
 
 ## Overview
 
-Use this skill to run an `agency-orchestrator` style multi-role workflow within the current Trae conversation. The core purpose is not standard task breakdown, but rather:
+Run an `agency-orchestrator` style multi-role workflow within the current Trae conversation. Tasks:
 
 - Reading or generating a YAML workflow.
 - Maintaining DAG layers based on `depends_on`.
 - Reading role files and switching roles for execution.
 - Executing true parallel steps only when conditions are met.
-
-The default goal is stable execution, not superficial parallelism.
 
 ## Use This Skill
 

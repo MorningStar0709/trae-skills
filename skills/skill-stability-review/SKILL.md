@@ -42,8 +42,9 @@ Review with this hierarchy:
 1. Agent execution stability.
 2. Windows and Trae compatibility.
 3. Chinese user trigger and communication quality.
-4. Maintainability and minimal ambiguity.
-5. Language polish.
+4. SKILL.md is agent-only: no human explanations (why, goal, purpose, philosophy) in SKILL.md. Delete them entirely — do not relocate.
+5. Maintainability and minimal ambiguity.
+6. Language polish.
 
 All reviews must enforce the repository-wide `skills/skill-language-policy/SKILL.md`. Do not penalize English technical text just because the user is Chinese. Penalize only when language choice harms trigger stability, execution accuracy, machine readability, or user communication.
 
@@ -361,7 +362,7 @@ Score each dimension from `0` to `5`.
 
 | Dimension | Weight | What It Measures |
 |---|---:|---|
-| Agent Executability | 25% | Whether the Skill gives the agent clear steps, inputs, outputs, success conditions, and failure paths. |
+| Agent Executability | 25% | Whether the Skill gives the agent clear steps, inputs, outputs, success conditions, and failure paths — and contains zero human explanations (delete entirely; do not relocate). |
 | Windows/Trae Fit | 20% | Whether host-side commands, paths, shell assumptions, Trae/MCP assumptions, and examples work in Windows Trae. |
 | Script Sync | 20% | Whether scripts, references, resources, templates, configs, and generated artifacts match `SKILL.md` and behave reliably. |
 | Trigger And Boundary | 15% | Whether the Skill triggers on the right requests, avoids adjacent Skills, and includes enough Chinese and English technical anchors. |

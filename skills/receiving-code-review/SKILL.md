@@ -7,8 +7,6 @@ description: Use when you already have code review feedback and need to validate
 
 ## Overview
 
-Use this skill to handle the "what to do after a review" phase. The focus is not on polite acknowledgment, but on translating feedback into technical judgments, clarifying questions, and orderly implementation.
-
 **Core Principle:** Validate feedback first, then decide whether to implement it.
 
 ## Use This Skill

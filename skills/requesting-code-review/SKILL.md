@@ -7,7 +7,7 @@ description: Use when you need an independent code review before commit, merge, 
 
 ## Overview
 
-Use this skill to request an independent code review for the current changes before continuing development, committing, or merging. The goal is not just to follow a process, but to catch behavioral regressions, architectural risks, missed requirements, and testing gaps as early as possible.
+Request an independent code review for the current changes before continuing development, committing, or merging.
 
 **Core Principle:** The earlier the review, the cheaper the fix.
 

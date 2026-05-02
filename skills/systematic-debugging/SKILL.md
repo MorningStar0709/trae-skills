@@ -5,12 +5,6 @@ description: Use when debugging bugs, test failures, build breaks, performance r
 
 # Systematic Debugging
 
-## Overview
-
-Proposing a fix directly without evidence usually just buries the symptom deeper. Use this skill to break debugging into an executable chain: collect evidence first, form a hypothesis, and only then fix the root cause.
-
-**Core Principle:** No fix proposals until the root cause investigation is complete.
-
 ## Use This Skill
 
 - The user reports a bug, test failure, build break, abnormal behavior, or performance issue.
@@ -55,10 +49,9 @@ If the symptom is unclear, clarify it. Do not start fixing.
 
 ### 2. Reproduce Stably
 
-The goal is not "I saw the error once", but "I know how to trigger it again".
-- Record minimal reproduction steps.
-- Narrow down inputs, scope, and target files as much as possible.
-- If it cannot be reproduced stably, continue adding logs and observation points instead of changing code directly.
+Record minimal reproduction steps.
+Narrow down inputs, scope, and target files as much as possible.
+If it cannot be reproduced stably, continue adding logs and observation points instead of changing code directly.
 
 ### 3. Establish Evidence Chain
 
@@ -86,8 +79,7 @@ Find a "working similar implementation" first, then compare differences:
 - Normal tests, commands, or modules in the same repository.
 - Reference implementations under the same pattern.
 - Differences in dependencies, initialization order, config values, or boundary conditions.
-
-Do not just say "it looks about the same here" based on intuition.
+Base conclusions on traceable differences, not intuition.
 
 ### 5. Propose a Single Hypothesis
 
@@ -168,7 +160,7 @@ Use this fixed skeleton by default:
 - [If verified: Enter `test-driven-development` for high-risk fixes, or `executing-plans` for straightforward changes / If unverified: Propose next diagnostic step / If blocked: Ask for missing context]
 ```
 
-If the root cause is not yet located, do not conclude with "应该这样修复".
+If the root cause is not yet located, do not output a fix.
 
 > **Context Payload (for downstream handoff)**
 >
@@ -185,7 +177,7 @@ If the root cause is not yet located, do not conclude with "应该这样修复".
 > **Fix Guidance:** [One-sentence summary of what needs to change]
 > ```
 
-If the root cause is non-obvious or the debugging uncovered a subtle system behavior, invoke `self-improvement` to log the finding as a `knowledge_gap` or `insight` before exiting. This prevents future agents from repeating the same investigation.
+If the root cause is non-obvious or the debugging uncovered a subtle system behavior, invoke `self-improvement` to log the finding as a `knowledge_gap` or `insight` before exiting.
 
 ## Resources
 

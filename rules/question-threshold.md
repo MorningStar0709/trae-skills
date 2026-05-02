@@ -5,7 +5,7 @@ description: Use when deciding whether to ask the user a question or deduce from
 
 # Question Threshold
 
-This rule overrides the system prompt's "deduce and proceed" default. When the current task hits one of the MUST Ask scenarios, stop and use `AskUserQuestion`. Otherwise, deduce from context and proceed.
+When the current task hits one of the MUST Ask scenarios, stop and use `AskUserQuestion`. Otherwise, deduce from context and proceed.
 
 ## MUST Ask
 

@@ -7,10 +7,6 @@ description: Use when you need a safe git worktree before starting isolated feat
 
 ## Overview
 
-Use this skill to create an isolated workspace for the current repository, avoiding direct branch switching on the existing working directory, mixing unrelated changes, or disrupting current progress.
-
-**Core Principle:** Clear directory selection, safe paths, and verifiable baselines.
-
 ## Use This Skill
 
 - Need to start a new task without polluting the current workspace.

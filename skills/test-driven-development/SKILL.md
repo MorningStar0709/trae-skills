@@ -7,8 +7,6 @@ description: Use when implementing behavior with tests first, including new feat
 
 ## Overview
 
-TDD is not "adding tests at the end", but defining behavior with a failing test first, then satisfying it with minimal implementation. The goal of this skill is to reduce regression risk and keep implementation aligned with requirements.
-
 **Core Principle:** If you don't see the test fail first, you don't know if it's actually protecting the correct behavior.
 
 ## Use This Skill

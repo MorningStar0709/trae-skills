@@ -7,11 +7,7 @@ description: Use when the user needs to design, create, optimize, split, or name
 
 ## Overview
 
-Use this Skill to generate a final, ready-to-fill and fine-tune configuration for a new Trae agent.
-
-The core goal is not to design a complete multi-agent system, nor to create a Trae Skill, but to help users define a new agent with clear boundaries, stable naming, accurate triggers, and restrained capability switches.
-
-Every output must cover:
+Generate a final, ready-to-fill configuration for a new Trae agent. Every output must cover:
 - Chinese name
 - System prompt
 - English identifier

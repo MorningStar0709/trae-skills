@@ -330,6 +330,22 @@ Rules:
 - Add a table of contents to resource files longer than 100 lines.
 - Put information in one place only; do not duplicate detailed rules between `SKILL.md` and resources.
 
+### Agent-Only Content Rule
+
+SKILL.md is read by the agent, not by humans. Explanatory text (why, goal, purpose, background, philosophy) must NOT appear in SKILL.md — delete it entirely. Do not relocate it to another file.
+
+Three content types with different handling:
+
+| Type | Audience | Example | In SKILL.md? |
+|:-----|:---------|:--------|:-------------|
+| **Agent instructions** | Agent | "Run X, check Y, if Z then do W" | ✅ Required |
+| **Output templates** | Agent→user | "发现 X 处差异，是否更新？" | ✅ Required |
+| **Human explanations** | Human reader | "The goal is not...", "This prevents..." | ❌ Delete entirely |
+
+Compression rule: If a sentence mixes a constraint with a why-explanation, keep only the constraint.
+- `"Do not just say it looks the same based on intuition"` → `"Base conclusions on traceable differences, not intuition."`
+- `"This prevents future agents from repeating the same investigation"` → delete the tail, keep the preceding instruction.
+
 ### Failure Strategy
 
 Define failure behavior explicitly:
