@@ -121,12 +121,17 @@ When the user says "校准记忆" or "同步记忆", perform a targeted refresh:
 
 1. Read key project files: `package.json`, `rules/` directory listing, `skills/` directory listing, `docs/` directory listing
 2. Read the current project entity via `mcp_memory_open_nodes`
-3. Compare observations against actual file state:
+3. If entity does not exist (search returned empty):
+   - Summarize what was found: project name from `package.json`, skill count, rule count, docs count
+   - Ask user: "项目记忆为空，是否基于当前文件状态初始化？"
+   - If confirmed: use `mcp_memory_create_entities` to create the project entity with initial observations from step 1
+   - Then proceed to step 4 to confirm the diff
+4. Compare observations against actual file state (or against the just-created entity):
    - Missing skills or rules → append via `mcp_memory_add_observations`
    - Outdated version numbers or descriptions → `mcp_memory_delete_observations` + `mcp_memory_add_observations`
    - Renamed or removed items → `mcp_memory_delete_observations`
-4. Report the diff to the user before writing: "发现 X 处差异，是否更新？（列出差异明细）"
-5. Only write changes after user confirmation
+5. Report the diff to the user before writing: "发现 X 处差异，是否更新？（列出差异明细）"
+6. Only write changes after user confirmation
 
 ## Failure Handling
 
