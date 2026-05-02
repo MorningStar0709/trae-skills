@@ -66,7 +66,7 @@
 | **M（中任务）** | `writing-plans` → `executing-plans`/`subagent-driven` → 验证 → 审查 → 再验证 → 提交 → 收尾（间含 Knowledge Promotion Gate） | 4-10 文件、非平凡但设计明确；任务耦合度高用 executing-plans，独立任务用 subagent-driven |
 | **L（大任务）** | `brainstorming` → [进入 M 路径] | 跨模块、需求模糊、架构变更 |
 
-### 3. 工具层 / 专项 Skill（13 个独立可插拔）
+### 3. 工具层 / 专项 Skill（14 个独立可插拔）
 
 | 类别 | Skill 列表 |
 |:-----|:-----------|
@@ -74,6 +74,7 @@
 | **前端/设计** | frontend-design / visual-brainstorming |
 | **图表** | chart-visualization |
 | **搜索/文档** | everything-search / find-docs |
+| **记忆系统** | memory-kernel |
 | **中文/国内** | chinese-copywriting / chinese-git-workflow |
 | **故障排查** | troubleshooting |
 | **Agent 架构** | agent-blueprint-architect |
@@ -144,12 +145,13 @@
 
 | 技能 | 什么时候用 |
 |:-----|:-----------|
-| **dispatching-parallel-agents** | 2 个以上独立的只读/分析任务需要并行执行 |
-| **workflow-runner** | 需要多角色（产品/架构/QA）协作的 YAML 编排 |
+| **dispatching-parallel-agents**       | 2 个以上独立的只读/分析任务需要并行执行 |
+| **workflow-runner**                   | 需要多角色（产品/架构/QA）协作的 YAML 编排 |
 | **discovering-subagent-capabilities** | 需要确认当前环境有哪些可用子代理类型 |
-| **find-docs** | 需要查询框架/库/SDK 的最新官方文档 |
-| **chinese-git-workflow** | 项目托管在 Gitee / GitLab / Coding 而非 GitHub |
-| **chinese-copywriting** | 需要排版中文技术文档（中英文混排、标点规范） |
+| **memory-kernel**                     | 通过 MCP 知识图谱进行跨会话持久化记忆读写 |
+| **find-docs**                         | 需要查询框架/库/SDK 的最新官方文档 |
+| **chinese-git-workflow**              | 项目托管在 Gitee / GitLab / Coding 而非 GitHub |
+| **chinese-copywriting**               | 需要排版中文技术文档（中英文混排、标点规范） |
 
 ### 3.6 浏览器/前端路径
 

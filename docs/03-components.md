@@ -66,7 +66,7 @@ Command failure / user correction / best practice discovery / knowledge gap → 
 | **M (Medium)** | `writing-plans` → `executing-plans`/`subagent-driven` → verify → review → re-verify → commit → finish (with Knowledge Promotion Gate) | 4-10 files, non-trivial but design clear; use executing-plans for coupled tasks, subagent-driven for independent tasks |
 | **L (Large)** | `brainstorming` → [enter M path] | Cross-module, fuzzy requirements, architecture changes |
 
-### 3. Tools Layer / Specialized Skills (13 pluggable)
+### 3. Tools Layer / Specialized Skills (14 pluggable)
 
 | Category | Skills |
 |:---------|:-------|
@@ -74,6 +74,7 @@ Command failure / user correction / best practice discovery / knowledge gap → 
 | **Frontend & Design** | frontend-design / visual-brainstorming |
 | **Charts** | chart-visualization |
 | **Search & Docs** | everything-search / find-docs |
+| **Memory System** | memory-kernel |
 | **Chinese / Domestic** | chinese-copywriting / chinese-git-workflow |
 | **Troubleshooting** | troubleshooting |
 | **Agent Architecture** | agent-blueprint-architect |
@@ -144,12 +145,13 @@ Skills are stored in `skills/<skill-name>/SKILL.md`, triggered by Agent automati
 
 | Skill | When to Use |
 |:------|:------------|
-| **dispatching-parallel-agents** | 2+ independent read-only/analysis tasks needing parallel execution |
-| **workflow-runner** | Multi-role (PM/architect/QA) collaboration YAML orchestration |
+| **dispatching-parallel-agents**       | 2+ independent read-only/analysis tasks needing parallel execution |
+| **workflow-runner**                   | Multi-role (PM/architect/QA) collaboration YAML orchestration |
 | **discovering-subagent-capabilities** | Need to confirm available subagent types in current environment |
-| **find-docs** | Need to query latest official docs for frameworks/libs/SDKs |
-| **chinese-git-workflow** | Project hosted on Gitee/GitLab/Coding instead of GitHub |
-| **chinese-copywriting** | Need to format Chinese technical docs (mixed Chinese/English, punctuation rules) |
+| **memory-kernel**                     | Cross-session persistent memory read/write via MCP Knowledge Graph |
+| **find-docs**                         | Need to query latest official docs for frameworks/libs/SDKs |
+| **chinese-git-workflow**              | Project hosted on Gitee/GitLab/Coding instead of GitHub |
+| **chinese-copywriting**               | Need to format Chinese technical docs (mixed Chinese/English, punctuation rules) |
 
 ### 3.6 Browser & Frontend Path
 
