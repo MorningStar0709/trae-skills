@@ -41,6 +41,7 @@ description: Always-active task classification and process routing. Apply T-Shir
   | Multi-role orchestration or YAML workflow | `workflow-runner` | single-skill execution |
   | Configuring Git for domestic platforms | `chinese-git-workflow` | manual remote setup |
   | Git commit | `git-commit` | raw `git commit -m` |
+  | GitHub operations (PR, issue, repo metadata, push) | `gh-cli` | manual `gh` commands |
   | 2+ independent read-only analysis tasks | `dispatching-parallel-agents` | sequential execution |
   | Command/tool failure, user correction, new insight | `self-improvement` | ignoring the learning |
   | Code review feedback to apply | `receiving-code-review` | blindly accepting comments |
