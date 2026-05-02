@@ -58,7 +58,7 @@ description: Always-active task classification and process routing. Apply T-Shir
   - **Exit**: `memory-kernel` write — persist key outcomes after verification
 
   **S (Direct Path):**
-  `[memory-kernel: read]` → `implementation` → `verification-before-completion` → `[memory-kernel: write if anything cross-session worthy]` → [`finishing-a-development-branch` appended directly]
+  `[memory-kernel: read]` → `implementation` (direct coding, no specialized skill) → `verification-before-completion` → `[memory-kernel: write if anything cross-session worthy]` → [`finishing-a-development-branch` appended directly]
   > S path commits after `verification-before-completion` passes (plain `git commit` by default; route to `git-commit` skill if a conventional commit message is preferred).
   > If a debuggable bug is discovered during implementation, switch to `systematic-debugging` (see Skill Routing Table) — the S path is no longer appropriate.
 

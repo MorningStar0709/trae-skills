@@ -260,7 +260,7 @@ digraph brainstorming {
 
 ## Integration
 
-- `writing-plans`: Upstream — brainstorming clarifies requirements and design, then hands off to writing-plans for task breakdown before implementation.
+- `writing-plans`: Downstream — brainstorming clarifies requirements and design, then hands off to writing-plans for task breakdown before implementation.
 - `executing-plans`: Downstream — when the scope is small and confirmed, brainstorming can proceed directly to sequential execution.
 - `subagent-driven-development`: Downstream — when the scope is small, confirmed, and tasks are independent, brainstorming can proceed directly to subagent-driven execution.
 - `visual-brainstorming`: Optional downstream — if the user accepts the browser companion offer, switch to visual-brainstorming for interactive prototyping, then return to brainstorming for text-based discussion.

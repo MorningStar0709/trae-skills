@@ -123,4 +123,5 @@ A previous attempt tried to discover custom agents by probing the local filesyst
 
 - `dispatching-parallel-agents`: Downstream — after discovering what subagents are available, dispatch parallel analysis/review tasks using this skill.
 - `subagent-driven-development`: Downstream — after discovering what implementation subagents are available, dispatch sequential implementation tasks using this skill.
+- `agent-blueprint-architect`: Upstream — uses this skill to discover existing subagents and check for overlap before designing new agents.
 - `skill-routing-and-execution-path.md`: Adjacent — the routing rule's Subagent Dispatch Decision Table determines when to dispatch; this skill determines which subagents exist to dispatch.
