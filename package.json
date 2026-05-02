@@ -1,7 +1,7 @@
 {
   "name": "trae-agent-enhancements",
   "version": "1.1.0",
-  "description": "Trae AI Agent 增强框架 — 34 个技能 + 8 条规则 + 双轨记忆。稳定、专业、中文优先。",
+  "description": "Trae AI Agent 增强框架 — 35 个技能 + 8 条规则 + 双轨记忆。稳定、专业、中文优先。",
   "type": "module",
   "bin": {
     "trae-agent-enhancements": "bin/trae-agent-enhancements.js"

@@ -7,7 +7,7 @@ This project is a **Trae AI Agent rules and skills collection**. Run `npx trae-a
 | Layer      | Count | One-Line Summary                                                                  |
 | :--------- | :---- | :-------------------------------------------------------------------------------- |
 | **Rules**  | 8     | Tell the Agent what it can do, what it can't, and which path to take              |
-| **Skills** | 34    | Professional toolboxes covering design → coding → debugging → commit → completion |
+| **Skills** | 35    | Professional toolboxes covering design → coding → debugging → commit → completion |
 | **Memory** | —     | Cross-session experience accumulation, smarter over time                          |
 
 ## One-Line Design Philosophy

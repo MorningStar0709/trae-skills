@@ -113,9 +113,3 @@ When using this skill, include in your response:
 - What command was executed (or attempted)
 - The structured result (key fields, not raw JSON dump)
 - If failed, the exact error and suggested next step
-
-## Integration
-
-- `git-commit`: Upstream — commit happens before `gh pr create`.
-- `finishing-a-development-branch`: Upstream — branch wrap-up may involve `gh pr create` or `gh pr merge`.
-- `chinese-git-workflow`: Adjacent — use when the remote is on a domestic platform.

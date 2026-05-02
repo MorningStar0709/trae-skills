@@ -64,7 +64,7 @@ brainstorming → writing-plans → executing-plans → verification-before-comp
 | Core Memory（20 条上限、自动淘汰） | `self-improvement` 主动管理记忆质量 | 互补 |
 | `manage_core_memory` 工具 | 封装为 Knowledge/Rule/Experience 三层 | 增强 |
 | `Task` 子代理 | 预检→分派→两层审查完整闭环 | 增强 |
-| `Skill` 自动匹配 | 中英双语 description，34 个契约化 SKILL.md | 适配 |
+| `Skill` 自动匹配 | 中英双语 description，35 个契约化 SKILL.md | 适配 |
 | IDE 工具集 | 终端纪律规范 + MCP 降级 | 规范 |
 | Rule Frontmatter | 4 激活模式全覆盖 + 质量标准 | 遵循 |
 
@@ -80,7 +80,7 @@ brainstorming → writing-plans → executing-plans → verification-before-comp
 - 自动化审查：`skill-stability-review` 内置 16 维审查脚本（review_skills.py，888 行），自动检查每一条 rule 和 skill 的合规性
 - 三层元技能保障：`creating-trae-rules` 指导写规则、`skill-creator` 指导写 Skill、`skill-language-policy` 规范语言
 
-**设计价值**：34 个技能 + 8 条规则本身就是"如何按 Trae 规范创建"的活教材。用户新写规则时直接参考即可。
+**设计价值**：35 个技能 + 8 条规则本身就是"如何按 Trae 规范创建"的活教材。用户新写规则时直接参考即可。
 
 ### 2.4 原创决策机制：T-Shirt 分档 + 提问阈值
 
