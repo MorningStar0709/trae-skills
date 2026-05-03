@@ -1,6 +1,6 @@
 ---
 name: memory-kernel
-description: Manage and query persistent cross-session memory via MCP Knowledge Graph. Step 0 executor: query before ANY task for project/pattern/user context. Use when the task involves remembering, retrieving, or storing project knowledge, or when you need historical context, including Chinese requests such as “你还记得吗”“之前讨论过”“校准记忆”“同步记忆”. Does NOT replace Trae Core Memory — complements it.
+description: "Manage and query persistent cross-session memory via MCP Knowledge Graph. Step 0 executor: query before ANY task for project/pattern/user context. Use when the task involves remembering, retrieving, or storing project knowledge, or when you need historical context, including Chinese requests such as \"你还记得吗\"\"之前讨论过\"\"校准记忆\"\"同步记忆\". Does NOT replace Trae Core Memory — complements it."
 ---
 
 # Memory Kernel
